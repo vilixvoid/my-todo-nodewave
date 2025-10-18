@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { CheckCircle, XCircle, LogOut, Trash2 } from "lucide-react";
 import {
@@ -122,7 +123,7 @@ export default function TodoPage() {
           <div className="flex items-center space-x-2">
             <span className="text-gray-800 font-medium">{fullName}</span>
             <div className="relative">
-              <img
+              <Image
                 src={`https://api.dicebear.com/9.x/adventurer/svg?seed=${encodeURIComponent(
                   fullName
                 )}`}
