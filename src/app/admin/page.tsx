@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Search, Home, LogOut } from "lucide-react";
 import { useAdminTodos } from "@/hooks/useAdminTodos";
 import axios from "axios";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function AdminPage() {
@@ -69,11 +70,13 @@ export default function AdminPage() {
         <div className="flex justify-end items-center mb-4">
           <div className="flex items-center gap-3">
             <span className="text-gray-700 font-medium">Ahmad Akbar</span>
-            <div className="relative">
-              <img
+            <div className="relative w-9 h-9">
+              <Image
                 src="https://i.pravatar.cc/40"
                 alt="avatar"
-                className="w-9 h-9 rounded-full border"
+                width={36}
+                height={36}
+                className="rounded-full border object-cover"
               />
               <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white" />
             </div>
